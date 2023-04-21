@@ -1,5 +1,5 @@
-# leetcode
-Practise resolving problems from leetcode.com
-https://leetcode.com/
+# Leetcode
+
+Practise resolving problems from [Leetcode](https://leetcode.com/)
 
 
