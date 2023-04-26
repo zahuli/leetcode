@@ -20,25 +20,37 @@ roms = {
 # print(type(roms["X"]))
 
 a = [1, 2, 3, 4]
-# print(type(sum(a)))
 
-# name = "Nikola"
-# n1 = name.rstrip(name[-1])
-# print(n1)
-# print(type(n1))
-# n1 = n1.rstrip(n1[-1])
-# print(n1)
-# n2 = "a"
-# n2 = n2.rstrip(n2[-1])
-# print(n2)
-# print(len(n2))
+notValid = {"(}", "(]", "{)", "{]", "[)", "[}"}
 
-# print(name.startswith("Nikola"))
+counts = {
+    "(": 0,
+    ")": 0,
+    "{": 0,
+    "}": 0,
+    "[": 0,
+    "]": 0
+}
 
-prefix = "aa"
+s = "[(([{{{}}}])))"
 
-print(prefix)
+for i in s:
+    counts[i] += 1
 
-prefix = prefix[:-1]
+# print(counts)
 
-print(prefix)
+if counts["("] == counts[")"] and counts["{"] == counts["}"] and counts["["] == counts["]"]:
+    print("ok")
+
+
+po = ["("]
+print(po[-1])
+
+po.append("[")
+po.append("[")
+po.append("[")
+
+print(po)
+
+if po[-1] in {"{", "("}:
+    print("da")
