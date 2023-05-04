@@ -1,10 +1,11 @@
 # https://www.nbs.rs/kursnaListaModul/naZeljeniDan.faces
-
+# python3 nbs_kurs.py 04/05/2023 1000
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
+import sys
 
 
 def get_exchange_rate(currency: str, date: str) -> float:
@@ -42,8 +43,12 @@ def get_exchange_rate(currency: str, date: str) -> float:
     driver.quit()
 
 
-date = "25/04/2023"
-usd = 1100
+# date = "27/04/2023"
+# usd = 1100
+
+date = str(sys.argv[1])
+usd = int(sys.argv[2])
+
 
 eur_rate = get_exchange_rate("EUR", date)
 usd_rate = get_exchange_rate("USD", date)
