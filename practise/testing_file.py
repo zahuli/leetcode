@@ -67,3 +67,8 @@ for row in range(0, 9):
         print(0, end=" ")
 
     print()
+
+l = [1, 2]
+
+for item in range(1, len(l)):
+    print(l[item])
