@@ -7,6 +7,9 @@ class ListNode(object):
         self.next = next
 
 
+# just to build list for testing
+
+
 def build_linked_list(arr):
     if not arr:  # empty array
         return None
@@ -21,16 +24,16 @@ def build_linked_list(arr):
 
 def mergeTwoLists(list1, list2):
     current = head = ListNode()  # dummy node
-    while list1 and list2:
+    while list1 and list2:  # it compares node values, takes lower value and moves to the next node in that list
         if list1.val < list2.val:
             current.next = list1
             list1 = list1.next
         else:
             current.next = list2
             list2 = list2.next
-        current = current.next
+        current = current.next  # it needs to go through merged list
 
-    if list1 or list2:
+    if list1 or list2:  # if the lists are empty or it went to the end of one of the lists
         current.next = list1 if list1 else list2
 
     return head.next
